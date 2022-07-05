@@ -6,6 +6,7 @@ using EstudosGerais.Adapter_Pattern;
 using EstudosGerais.Command_Pattern;
 using EstudosGerais.Throw;
 using EstudosGerais.OOP;
+using EstudosGerais.Thread_Multithread;
 
 #region Classe Triangulo
 /*
@@ -175,20 +176,20 @@ Console.WriteLine(pedido.ToString());
 #region Patterns
 
 //Facade
-var facade = new FacadeRestaurant();
-facade.BuscarPizzaNormal();
-facade.BuscarPizzaVegana();
+//var facade = new FacadeRestaurant();
+//facade.BuscarPizzaNormal();
+//facade.BuscarPizzaVegana();
 
 //Adapter
-ILumiaXMLTarget lumiaXMLTarget = new LumiaXMLAdapter();
-var xmlLumia = lumiaXMLTarget.GetLumiaMobileXMLSpecifications();
+//ILumiaXMLTarget lumiaXMLTarget = new LumiaXMLAdapter();
+//var xmlLumia = lumiaXMLTarget.GetLumiaMobileXMLSpecifications();
 
-Console.WriteLine(xmlLumia.InnerXml);
+//Console.WriteLine(xmlLumia.InnerXml);
 
 //Command
-var commandResult = (State)new Receiver().Action(new Command(1, "Command One"));
+//var commandResult = (State)new Receiver().Action(new Command(1, "Command One"));
 
-Console.WriteLine($"Code: {commandResult.StatusCode} - Message: {commandResult.Message}");
+//Console.WriteLine($"Code: {commandResult.StatusCode} - Message: {commandResult.Message}");
 
 //Observer
 
@@ -209,8 +210,14 @@ Console.WriteLine($"Code: {commandResult.StatusCode} - Message: {commandResult.M
 
 #endregion
 
+#region MultiThread
+
+MultiThread.VariasThreads();
+
+#endregion
+
 //
-SubClasse sbClass = new SubClasse();
-sbClass.MetodoClassePai();
+//SubClasse sbClass = new SubClasse();
+//sbClass.MetodoClassePai();
 
 
